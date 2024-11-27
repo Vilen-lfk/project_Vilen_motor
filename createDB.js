@@ -3,7 +3,7 @@ const { MongoClient } = require('mongodb');
 //nodeimport { MongoClient } from 'mongodb'
 var data = require("./data.js").data;
 console.log(data)
-/*// Connection URL
+// Connection URL
 const url = 'mongodb://localhost:27017';
 const client = new MongoClient(url);
 // Database Name
@@ -23,4 +23,3 @@ main()
 .then(console.log)
 .catch(console.error)
 .finally(() => client.close());
-*/
