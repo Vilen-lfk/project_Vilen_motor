@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/tc2024')
+mongoose.connect('mongodb://localhost/moto')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -40,9 +40,8 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('error',{title: 'Motorcycles'});
   //res.render('error');
-res.render('error',{title: 'Motorcycles'});
 });
 
 
