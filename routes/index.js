@@ -3,8 +3,10 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+  res.cookie('greeting', 'MOTO!!!').render('index', { title:
+  'Express' });
+  });
+  
 /*/* Страница BMW 1000r
 router.get('/bmw', function(req, res, next) {
   res.render('moto', {
