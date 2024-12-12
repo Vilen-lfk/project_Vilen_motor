@@ -21,15 +21,17 @@
       <div class="collapse navbar-collapse"
       id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item">
-      <a class="nav-link" href="/motos/bmw">BMW 1000R</a>
-      </li>
-      <li class="nav-item">
-      <a class="nav-link" href="/motos/harley">Harley-Davidson</a>
-      </li>
-      <li class="nav-item">
-      <a class="nav-link" href="/motos/racer">Racer 300</a>
-      </li>
+        <% if(typeof nav == 'object' && nav){
+        nav.forEach(function(item){
+        %>
+        <li class="nav-item">
+        <a class="nav-link" href="/motos/<%= item.nick %>"><%=
+        item.title %></a>
+        </li>
+        <%
+        })}
+        %>
+        </ul>
       </ul>
       </div>
       </div>
