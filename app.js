@@ -9,8 +9,6 @@ var session = require("express-session")
 var MongoStore = require('connect-mongo');
 
 
-var username = req.body.username
-var password = req.body.password
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var motos = require('./routes/motos');
